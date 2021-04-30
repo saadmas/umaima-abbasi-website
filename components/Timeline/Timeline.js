@@ -32,7 +32,7 @@ const Timeline = () => {
           dateClassName={styles.date}
           textClassName={styles.timelineElement}
           // icon={getIcon(index)} ///
-          // iconStyle={{ background: '#0A0A0A' }}
+          // iconStyle={{ background: '#0A0A0A' }} ///
           contentArrowStyle={{ borderRight: '7px solid #667db6' }}
         >
           <TimelineCard cardData={experience} />

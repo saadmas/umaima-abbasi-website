@@ -1,0 +1,23 @@
+.navBarContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  font-size: 18px;
+  font-family: 'Crimson Text', serif;
+
+  .navLink {
+      &:hover {
+        text-decoration: underline;
+        text-underline-position: under;
+        cursor: pointer;
+      }  
+  }
+}
+
