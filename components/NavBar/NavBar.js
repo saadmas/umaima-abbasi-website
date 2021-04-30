@@ -1,18 +1,24 @@
-import styles from './NavBar.module.scss';
+import DesktopNavBar from './DesktopNavBar/DesktopNavBar';
+import MobileNavBar from './MobileNavBar/MobileNavBar';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
+const navLinks = [
+  'Work',
+  'Leadership',
+  'Interests',
+  'Resume',
+  'About Me',
+  'Contact'
+];
 
 const NavBar = () => {
-  return (
-    <div className={styles.navBarContainer}>
-      <div className={styles.navBar}>
-        <span className={styles.navLink}>Work</span>
-        <span className={styles.navLink}>Leadership</span>
-        <span className={styles.navLink}>Interests</span>
-        <span className={styles.navLink}>Resume</span>
-        <span className={styles.navLink}>About Me</span>
-      </div>
-    </div>
-  );
+  const windowDimensions = useWindowDimensions();
+
+  if (windowDimensions?.width > 1050) {
+    return <DesktopNavBar navLinks={navLinks}/>;
+  }
+  
+  return <MobileNavBar navLinks={navLinks}/>;
 };
 
 export default NavBar;

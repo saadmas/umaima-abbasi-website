@@ -1,0 +1,27 @@
+.mobileNavBar {
+  font-family: 'Josefin Sans', sans-serif;
+
+  .menuButton, button {
+    position: absolute;
+    top: 25px;
+    right: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.MuiDrawer-paper {
+  background: #121212 !important;
+  color: #fff !important;
+
+  .MuiTypography-root {
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+
+  .MuiListItemIcon-root {
+    color: #fff;
+  }
+}
