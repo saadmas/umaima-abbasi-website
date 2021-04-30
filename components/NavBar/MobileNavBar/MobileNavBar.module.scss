@@ -5,6 +5,7 @@
     position: absolute;
     top: 25px;
     right: 0;
+    color: #fff;
   }
 
   a {
@@ -13,15 +14,8 @@
   }
 }
 
-.MuiDrawer-paper {
-  background: #121212 !important;
-  color: #fff !important;
-
-  .MuiTypography-root {
-    font-family: 'Josefin Sans', sans-serif !important;
-  }
-
-  .MuiListItemIcon-root {
-    color: #fff;
+.navLinkText {
+  :first-child {
+    font-family: 'Crimson Text', serif !important;
   }
 }

@@ -6,7 +6,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import './MobileNavBar.module.scss';
+import styles from './MobileNavBar.module.scss';
 
 const MobileNavBar = ({ navLinks }) => {
   const [isBladeOpen, setIsBladeOpen] = React.useState(false);
@@ -22,7 +22,7 @@ const MobileNavBar = ({ navLinks }) => {
   const getNavBar = () => {
     const navLinkElements = navLinks.map(navLink => (
       <ListItem button to={'/'} onClick={closeBlade} key={navLink}>
-        <ListItemText primary={navLink} />
+        <ListItemText primary={navLink} className={styles.navLinkText}/>
       </ListItem>
     ));
     
@@ -34,10 +34,10 @@ const MobileNavBar = ({ navLinks }) => {
   };
 
   return (
-    <span className="mobileNavBar">
+    <span className={styles.mobileNavBar}>
       <IconButton
         aria-label="menu"
-        className="menuButton"
+        className={styles.menuButton}
         onClick={openBlade}
       >
         <MenuIcon />
@@ -46,6 +46,12 @@ const MobileNavBar = ({ navLinks }) => {
         anchor="right"
         open={isBladeOpen}
         onClose={closeBlade}
+        PaperProps={{
+          style: {
+            background: 'linear-gradient(-45deg, #EEBECE, #23a6d5)',
+            color: '#fff'
+          }
+        }}
       >
         {getNavBar()}
       </Drawer>
