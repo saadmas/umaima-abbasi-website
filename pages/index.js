@@ -19,9 +19,6 @@ export default function Home() {
         />
       </Head>
 
-      <div class="radial-gradient"></div>
-
-      
       <main className={styles.main}>
         <NavBar />
         <Welcome />

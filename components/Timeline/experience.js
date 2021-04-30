@@ -1,9 +1,15 @@
+// import styles from './Timeline.module.scss';
+
 export const experienceData = [
   {
     org: 'NYC Department of Health and Mental Hygiene',
     title: 'New York Knows Community Engagement Project Coordinator',
-    location: '',
     dates: 'Sep 2020 - Present',
+    icon: {
+      src: 'nyc-health-logo.png',
+      alt: 'Logo for NYC Department of Health and Mental Hygiene',
+      className: 'nycHealthLogo'
+    },
     keyPoints: [
       `Created weekly newsletter for 1,519 subscribed community partners with health department updates,
       partner announcements, and job opportunities`,
@@ -14,7 +20,10 @@ export const experienceData = [
   {
     org: 'University of Michigan (UM) - School of Public Health',
     title: 'Prevention Research Center Research Assistant',
-    location: '',
+    icon: {
+      src: 'u-m-logo.png',
+      alt: 'Logo for University of Michigan'
+    },
     dates: 'Sep 2019 - May 2020',
     keyPoints: [
       `Analyzed 97 sets of qualitative and quantitative data from stakeholders on opioid misuse in order to develop research question`,

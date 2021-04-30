@@ -6,7 +6,14 @@ const TimelineCard = ({ cardData }) => {
   const { keyPoints, org, title } = cardData;
 
   const renderKeyPoints = () => {
-    const keyPointElements = keyPoints.map(keyPoint => <li className={styles.keyPoint}>{keyPoint}</li>);
+    const keyPointElements = keyPoints.map((keyPoint, index) => (
+      <li
+        className={styles.keyPoint}
+        key={`keyPoint-${index}`}
+      >
+        {keyPoint}
+      </li>
+    ));
     return (
       <ul className={styles.keyPointsList}>
         {keyPointElements}
