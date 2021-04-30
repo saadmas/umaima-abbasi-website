@@ -1,6 +1,5 @@
 .timeline {
   margin-top: 100px;
-  margin-bottom: 25px;
 
   .roundIcon {
     width: 40px;
@@ -27,4 +26,23 @@
 
 .verticalTimeline {
   max-width: 3000px;
+}
+
+@media screen and (max-width: 420px) {
+  .timeline {
+    margin-top: 50px;
+    margin-bottom: 0;
+    overflow: hidden !important;
+    
+    .roundIcon {
+      width: 40px;
+      height: 50px;
+      top: 30%;
+      left: 36%;
+    }
+  }
+  
+  .verticalTimeline {
+    max-width: 300px;
+  }
 }

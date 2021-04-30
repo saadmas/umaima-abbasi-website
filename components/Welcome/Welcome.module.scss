@@ -28,3 +28,13 @@
   from, to { border-color: transparent }
   50% { border-color: white }
 }
+
+@media screen and (max-width: 420px) {
+  .welcome {
+    margin-left: 50px;
+    
+    .subText {
+      height: 40px;
+    }
+  }
+}

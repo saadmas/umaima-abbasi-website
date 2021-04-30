@@ -5,7 +5,6 @@ import React from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Link from 'next/link';
 
 import './MobileNavBar.module.scss';
 
@@ -22,7 +21,7 @@ const MobileNavBar = ({ navLinks }) => {
 
   const getNavBar = () => {
     const navLinkElements = navLinks.map(navLink => (
-      <ListItem button component={Link} to={'/'} onClick={closeBlade}>
+      <ListItem button to={'/'} onClick={closeBlade} key={navLink}>
         <ListItemText primary={navLink} />
       </ListItem>
     ));
